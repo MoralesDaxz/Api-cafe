@@ -1,0 +1,68 @@
+const dataProducts = [
+  {
+    "_id": "1",
+    "img_url": "",
+    "price": 9,
+    "brand": "Sierra",
+    "available": true,
+    "pack": "250",
+  },
+  {
+    "_id": "2",
+    "img_url": "",
+    "price": 9,
+    "brand": "Loma",
+    "available": true,
+    "pack": "250",
+  },
+  {
+    "_id": "3",
+    "img_url": "",
+    "price": 9,
+    "brand": "Tardes",
+    "available": true,
+    "pack": "250",
+  },
+  {
+    "_id": "4",
+    "img_url": "",
+    "price": 9,
+    "brand": "5",
+    "available": true,
+    "pack": "250",
+  },
+  {
+    "_id": "5",
+    "img_url": "",
+    "price": 9,
+    "brand": "Intenso",
+    "available": true,
+    "pack": "250",
+  },
+  {
+    "_id": "6",
+    "img_url": "",
+    "price": 9,
+    "brand": "Classic",
+    "available": true,
+    "pack": "250",
+  },
+  {
+    "_id": "7",
+    "img_url": "",
+    "price": 9,
+    "brand": "Choco",
+    "available": true,
+    "pack": "250",
+  },
+  {
+    "_id": "8",
+    "img_url": "",
+    "price": 9,
+    "brand": "Mezcla",
+    "available": true,
+    "pack": "250",
+  },
+];
+
+module.exports = dataProducts;

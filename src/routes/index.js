@@ -1,66 +1,25 @@
 const { Router } = require("express");
+const dataProducts = require("../../utils/products");
 const router = Router();
 
-router.get("/products", (req, res) => {
-  res.json({
-    products: [
-      {
-        _id: "sierra250",
-        img_url: "",
-        price: 9,
-        brand: "Sierra",
-        available: true,
-      },
-      {
-        _id: "loma250",
-        img_url: "",
-        price: 9,
-        brand: "Loma",
-        available: true,
-      },
-      {
-        _id: "tardes250",
-        img_url: "",
-        price: 9,
-        brand: "Tardes",
-        available: true,
-      },
-      {
-        _id: "volcan250",
-        img_url: "",
-        price: 9,
-        brand: "Volcan",
-        available: true,
-      },
-      {
-        _id: "intenso250",
-        img_url: "",
-        price: 9,
-        brand: "Intenso",
-        available: true,
-      },
-      {
-        _id: "classic250",
-        img_url: "",
-        price: 9,
-        brand: "Classic",
-        available: true,
-      },
-      {
-        _id: "choco250",
-        img_url: "",
-        price: 9,
-        brand: "Choco",
-        available: true,
-      },
-      {
-        _id: "mezcla250",
-        img_url: "",
-        price: 9,
-        brand: "Mezcla",
-        available: true,
-      },
-    ],
-  });
+/* GET */
+router.get("/", (req, res) => {
+  res.send("Hola!");
+});
+router.get("/api/products", (req, res) => {
+  res.json(dataProducts);
+});
+
+/* POST */
+router.post("/api/products/add", (req, res) => {
+  const { img_url, price, brand, available, pack } = req.body;
+  if (img_url && price && brand && available && pack) {
+    const id = `${dataProducts.length + 1}`;
+    const newProduct = { id, ...req.body };
+    dataProducts.push(newProduct);
+    res.send('Agregado');
+  } else {
+    res.status(500).json({ error: "There was an error." });
+  }
 });
 module.exports = router;
