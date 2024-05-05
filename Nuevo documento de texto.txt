@@ -1,0 +1,14 @@
+JSON =
+_id 
+img_url
+price
+brand
+available
+
+Crear package.json
+npm init --yes
+Crear modulos 
+npm i express (Framework node) morgan (ver por consola las peticiones)
+npm i nodemon -D (como dependencia de Desarrollo)
+mkdir -> src
+-> index.js
